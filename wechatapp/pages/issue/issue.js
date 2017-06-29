@@ -2,9 +2,51 @@
 //获取应用实例
 var app = getApp()
 Page({
-    data: {},
+    data: {
+      questionId : 0,
+      question: {},
+      answers: [],
+    },
     onLoad: function(ev) {
+        var that = this
         console.log(ev)
+        that.setData({
+          questionId: ev.qid
+        })
+
+        wx.request({
+          url: 'https://www.zhiya01.com/srv/AppService.asmx/GetQuestionDetail',
+          data: {
+            questionId: ev.qid
+          },
+          method: 'POST',
+          header: {
+            'Content-Type': 'application/json'
+          },
+          success: function (res) {
+            var list = JSON.parse(res.data.d);
+            that.setData({
+              question: list.Data[0]
+            })
+          }
+        })
+
+        wx.request({
+          url: 'https://www.zhiya01.com/srv/AppService.asmx/GetQuestionAnswers',
+          data: {
+            questionId: ev.qid
+          },
+          method: 'POST',
+          header: {
+            'Content-Type': 'application/json'
+          },
+          success: function (res) {
+            var list = JSON.parse(res.data.d);
+            that.setData({
+              answers: list.Data
+            })
+          }
+        })
     },
     toPerson: function(e) {
         console.log(e)

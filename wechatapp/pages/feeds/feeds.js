@@ -30,7 +30,7 @@ Page({
       success: function (res) {
         var list = JSON.parse(res.data.d);
         that.setData({
-          feedList: list
+          feedList: list.Data
         })
         try {
           wx.setStorageSync('feeds', list)

@@ -28,15 +28,17 @@
 .ques-cost{
 	color: #f85f48;
 }
-.ques-content{
-	padding: 10rpx 0 30rpx 90rpx;
+.ques-title{
+	padding: 10rpx 0 10rpx 40rpx;
 	font-size: 28rpx;
 }
+.ques-content{
+	padding: 10rpx 0 30rpx 40rpx;
+	font-size: 25rpx;
+}
 .ans-wrapper{
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: row;
 	align-items: center;
+	background-color: #fff;
 }
 .ans-wrapper image{
 	width: 80rpx;
@@ -53,24 +55,25 @@
 .ans-time{
 	color: #ccc;
 }
-.ans-info{	
-	color: #aaa;
-	margin-top: 30rpx;
-	padding-top: 20rpx;
-	border-top: 1px solid #eee;
+.ans-info{
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
+	color: #aaa;
+	padding: 10rpx 0 5rpx 40rpx;
+	font-size: 25rpx;
 }
 .master-info{
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
-	padding: 30rpx;
+	padding: 30rpx 0 5rpx 20rpx;
 	background-color: #fff;
-	margin-bottom: 30rpx;
+	margin-top: 30rpx;
+	padding-top: 20rpx;
+	border-top: 1px solid #eee;
 }
 .master-info image{
 	width: 100rpx;

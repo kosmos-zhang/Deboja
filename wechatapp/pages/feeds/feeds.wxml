@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower">
 	<block wx:for="{{feedList}}" wx:key="item.RowNumber">
-		<navigator class="scroll-view-item" url="../issue/issue?stamp={{item.Id}}">
+		<navigator class="scroll-view-item" url="../issue/issue?qid={{item.Id}}">
 			<text class="item-ques">{{item.Title}}</text>
 			<view class="item-ans">
 				<!--<image src="/img/avatar/{{item.masterAvatar}}" mode="aspectFill" catchtap="toPerson" data-master="{{item.masterID}}"></image>-->
