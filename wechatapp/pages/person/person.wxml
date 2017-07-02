@@ -1,23 +1,25 @@
 <view class="about">
 	<view class="master-info">
-		<image src="/img/avatar/czy.png"></image>
+		<image src="{{masterInfo.AvatarUrl}}"></image>
 		<view class="master-brief">
-			<view class="master-user">陈章鱼</view>
-			<view class="master-fans"><text class="bold">2821</text> 关注</view>
+			<view class="master-user">{{masterInfo.RealName}}</view>
+			<view class="master-fans"><text class="bold">{{masterInfo.AnsweredCount}}</text> 关注</view>
 		</view>
 		<view class="master-follow">关注</view>
 	</view>
-	<view class="master-intro">知乎50万关注答主，人丑就该多读书</view>
+	<view class="master-intro">{{masterInfo.Description}}</view>
 	<view bindtap="toIssue" class="detail">
-		<view>每年至少读100本书，加200天班，还抽空追10部美剧，涨了5斤体重</view>
-		<view>唯一能天天坚持的只有四件事：吃饭睡觉喘气读书</view>
+		<view></view>
+		<view></view>
 	</view>
 </view>
 <view class="quiz-wrapper">
 	<view class="quiz-info">公开提问</view>
-	<view class="quiz-input">
-		<textarea placeholder="向TA提问，等TA语音回答" maxlength="5">向TA提问，等TA语音回答</textarea>
-	</view>
-	<!--<view class="quiz-cost">￥9.9</view>-->
-	<button class="submit">提问</button>
+  <form bindsubmit="rpSubmit">
+  	<view class="quiz-input">
+	  	<textarea name="rpContent" placeholder="向TA提问，等TA回答" value=""></textarea>
+	  </view>
+	  <!--<view class="quiz-cost">￥9.9</view>-->
+    <button formType="submit" class="submit">提问</button>
+  </form>
 </view>

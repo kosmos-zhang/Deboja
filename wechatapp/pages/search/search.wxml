@@ -1,5 +1,6 @@
 <template name="master-column">
-	<view class="master-info" bindtap="toPerson" data-master="czy">
+	<view class="master-info" bindtap="toPerson" data-master="{{UserId}}">
+    <image src="{{AvatarUrl}}" class="master-avatar"></image>
 		<view class="master-brief">
 			<view class="master-user">{{RealName}}</view>
 			<view class="master-intro">{{Description}}</view>

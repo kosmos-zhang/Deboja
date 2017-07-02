@@ -2,7 +2,7 @@
 <scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower">
 	<view class="ques-wrapper">
 		<view class="ques-info">
-			<image src="/img/avatar/qust-avater.png"></image>
+			<image src="{{question.AvatarUrl}}"></image>
 			<view class="ques-sec">
 				<view class="ques-user">{{question.CreatorName}}</view>
  			  <view >浏览量：{{question.ViewCount}}</view>
@@ -13,12 +13,16 @@
 	</view>
   <view class="ans-wrapper">
     <block wx:for="{{answers}}" wx:key="item.Id">
-      <view>
       <view class="master-info">
-        <view class="master-user">{{item.UserName}}</view>
+        <image src="{{item.AvatarUrl}}"></image>
+        <view class="ques-sec">
+          <view class="master-user">{{item.UserName}}</view>
+        </view>
       </view>
       <text class="ans-info">{{item.AnswerContent}}</text>
-      </view>
     </block>
-  </view> 
+  </view>
+  <view class="rep-wrapper">
+    <button class="submit" bindtap="onBtnReplyClick">我要回答</button>
+  </view>
 </scroll-view>

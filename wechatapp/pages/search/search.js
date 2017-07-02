@@ -24,7 +24,7 @@ Page({
   },
   toPerson: function (e) {
     wx.navigateTo({
-      url: '../person/person?master=' + e.target.dataset.master
+      url: '../person/person?master=' + e.currentTarget.dataset.master
     })
   }
 })

@@ -5,7 +5,8 @@
     "pages/mine/mine",
     "pages/logs/logs",
     "pages/person/person",
-    "pages/issue/issue"
+    "pages/issue/issue",
+    "pages/reply/reply"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -40,5 +41,5 @@
         "selectedIconPath": "img/mine1.png"
       }
     ]
-  }  
+  }
 }

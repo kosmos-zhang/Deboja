@@ -39,6 +39,8 @@
 .ans-wrapper{
 	align-items: center;
 	background-color: #fff;
+	padding: 30rpx;
+	margin-bottom: 30rpx;
 }
 .ans-wrapper image{
 	width: 80rpx;
@@ -110,4 +112,9 @@
 	border-radius: 50rpx;
 	background-color: #999;
 	text-align: center;
+}
+.rep-wrapper {
+ 	align-items: center;
+	background-color: #fff;
+	padding: 10rpx 0 0 0;
 }

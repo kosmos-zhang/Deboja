@@ -1,0 +1,6 @@
+<view class="reply-wrapper">
+  <form bindsubmit="rpSubmit">
+    <textarea name="rpContent" maxlength="2000" value="{{rpContent}}" class="weui-textarea" placeholder="填写内容"/>
+    <button formType="submit" disabled="{{btndisabled}}" class="weui-btn mini-btn" type="primary" size="mini">提交回答</button>
+  </form>
+</view>

@@ -8,17 +8,20 @@ App({
   },
   getUserInfo:function(cb){
     var that = this
-    if(this.globalData.userInfo){
-      typeof cb == "function" && cb(this.globalData.userInfo)
-    }else{
+    var userInfo = wx.getStorageSync('userInfo') || null
+    if (userInfo) {
+      typeof cb == "function" && cb(userInfo)
+    } else {
       //调用登录接口
       wx.login({
         success: function (rlog) {
           var code = rlog.code;
+          //调用request请求api转换登录凭证  
           wx.getUserInfo({
             success: function (res) {
-              that.globalData.userInfo = res.userInfo
-              typeof cb == "function" && cb(that.globalData.userInfo)
+              wx.setStorageSync('userInfo', res.userInfo)
+
+              typeof cb == "function" && cb(res.userInfo)
 
               // 记录到服务器
               console.log('getUserInfo')
@@ -34,6 +37,8 @@ App({
                   'Content-Type': 'application/json'
                 },
                 success: function (res) {
+                  var list = JSON.parse(res.data.d);
+                  wx.setStorageSync('openId', list.Data)
                 }
               })
             }
@@ -43,6 +48,5 @@ App({
     }
   },
   globalData:{
-    userInfo:null
   }
 })
