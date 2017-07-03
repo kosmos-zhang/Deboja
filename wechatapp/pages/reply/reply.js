@@ -91,6 +91,7 @@ Page({
     }
 
     var openId = wx.getStorageSync('openId') || "";
+    console.log(openId);
     //提交(自定义的get方法)
     wx.request({
       url: 'https://www.zhiya01.com/srv/AppService.asmx/AnswerQuestion',
@@ -104,6 +105,7 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
+        console.log(res);
         wx.reLaunch({
           url: '../issue/issue?qid=' + that.data.questionId
         })

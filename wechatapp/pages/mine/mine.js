@@ -4,8 +4,9 @@ var app = getApp()
 Page({
   data: {
     motto: 'Hello World',
+    openId: "",
     userInfo: {},
-    myProfile: [{ "desc": "我问", "id": "myQues" }, { "desc": "我答", "id": "myHeared" }],
+    myProfile: [{ "desc": "我问", "id": "myQues", }, { "desc": "我答", "id": "myHeared" }],
     myAccount: ["帮助", "关于"]
   },
   //事件处理函数
@@ -15,8 +16,10 @@ Page({
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
       //更新数据
+      var openId = wx.getStorageSync('openId') || "";
       that.setData({
-        userInfo:userInfo
+        userInfo: userInfo,
+        openId: openId,
       })
     })
   },

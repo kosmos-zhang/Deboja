@@ -33,7 +33,7 @@ Page({
           feedList: list.Data
         })
         try {
-          wx.setStorageSync('feeds', list)
+          wx.setStorageSync('feeds', list.Data)
         } catch (e) { }
       }
     })
@@ -80,14 +80,17 @@ Page({
           hidden: true
         })
         var list = JSON.parse(res.data.d);
-        var feedsStorage = wx.getStorageSync('feeds') || []
-        feedsStorage = feedsStorage.concat(list)
-        that.setData({
-          feedList: feedsStorage
-        })
-        try {
-          wx.setStorageSync('feeds', feedsStorage)
-        } catch (e) { }
+        if (list.Data.length > 0)
+        {
+          var feedsStorage = wx.getStorageSync('feeds') || []
+          feedsStorage = feedsStorage.concat(list.Data)
+          that.setData({
+            feedList: feedsStorage
+          })
+          try {
+            wx.setStorageSync('feeds', feedsStorage)
+          } catch (e) { }
+        }
         console.log("同步成功啦")
       }
     })

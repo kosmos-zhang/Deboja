@@ -59,7 +59,12 @@ Page({
       },
       success: function (res) {
         wx.switchTab({
-          url: '../feeds'
+          url: '../feeds/feeds',
+          success:  function  (e)  {
+            var page = getCurrentPages().pop();
+            if (page == undefined || page == null) return;
+            page.onShow();
+          }
         })
       },
       fail: function (res) {

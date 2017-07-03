@@ -1,0 +1,15 @@
+<scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower">
+	<block wx:for="{{feedList}}" wx:key="item.RowNumber">
+		<navigator class="scroll-view-item" url="../issue/issue?qid={{item.Id}}">
+			<view class="item-ques">
+        <image src="{{item.AvatarUrl}}" mode="aspectFill" catchtap="toPerson" class="userinfo-avatar"></image>
+			  <text class="item-ques">{{item.Title}}</text>
+      </view>
+			<view class="item-ans">
+				<view class="item-voice">回答</view>
+				<view class="item-pv">浏览：{{item.ViewCount}}</view>
+			</view>
+		</navigator>
+	</block>
+</scroll-view>
+

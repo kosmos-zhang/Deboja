@@ -6,7 +6,8 @@
     "pages/logs/logs",
     "pages/person/person",
     "pages/issue/issue",
-    "pages/reply/reply"
+    "pages/reply/reply",
+    "pages/quests/quests"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -6,10 +6,12 @@
   </view>
 	<view class="profile-wrapper" catchtap="loadProfile">
 		<block wx:for="{{myProfile}}" wx:key="item.id">
-			<view class="profile" id="{{item.id}}">
-				<view class="profile-item"> {{item.desc}} </view>
-				<image class="profile-arrow" src="/img/arrow.png"></image>
-			</view>
+      <navigator class="scroll-view-item" url="../quests/quests?tp={{item.id}}">
+        <view class="profile" id="{{item.id}}">
+          <view class="profile-item"> {{item.desc}} </view>
+          <image class="profile-arrow" src="/img/arrow.png"></image>
+        </view>
+      </navigator>
 		</block>
 	</view>
 	<view class="account-wrapper">
