@@ -74,7 +74,7 @@
 	width: 600rpx;
 	padding: 30rpx;
 	background-color: #fafafa;
-	color: #ddd;
+	color: #111;
 	border: 1rpx solid #ddd;
 }
 .quiz-cost{
@@ -86,6 +86,6 @@
 	padding: 8rpx 35rpx;
 	background-color: #f85f48;
 	color: #fff;
-	font-size: 14rpx;
+	font-size: 30rpx;
 	border-radius: 10rpx;
 }

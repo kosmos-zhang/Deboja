@@ -1,9 +1,26 @@
 <!--index.wxml-->
 <scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower">
+  <view class="scroll-view-item1">
+   <text class="item-ques-ask">专业选择、学业困惑、 职涯烦恼</text>
+   <bottom class="item-ques-askbottom" bindtap="onBtnAsk">提问</bottom>
+  </view>
+  <view hidden="{{askquest ? false : true}}">
+    <view class="quiz-wrapper">
+      <form bindsubmit="rpSubmit">
+        <view class="quiz-input">
+          <textarea name="rpContent" placeholder="我的问题" value=""></textarea>
+        </view>
+        <button formType="submit" class="submit">提问</button>
+      </form>
+    </view>  
+  </view>
 	<block wx:for="{{feedList}}" wx:key="item.RowNumber">
 		<navigator class="scroll-view-item" url="../issue/issue?qid={{item.Id}}">
+			<view class="item-ques-user">        
+			  <text class="item-ques-user">{{item.UserName}}</text>
+      </view>
 			<view class="item-ques">
-        <image src="{{item.AvatarUrl}}" mode="aspectFill" catchtap="toPerson" class="userinfo-avatar"></image>
+        <!--<image src="{{item.AvatarUrl}}" mode="aspectFill" catchtap="toPerson" class="userinfo-avatar"></image>-->
 			  <text class="item-ques">{{item.Title}}</text>
       </view>
 			<view class="item-ans">

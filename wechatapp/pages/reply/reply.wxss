@@ -9,5 +9,9 @@
   height: 500rpx;
   border: 1px solid silver;
   margin-bottom: 20rpx;
-  font-size: 26rpx;
+  font-size: 25rpx;
+  color: darkgrey;
+}
+.rptext{
+  padding: 10rpx
 }

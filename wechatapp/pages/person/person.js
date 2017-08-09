@@ -58,12 +58,14 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
+        var t = new Date().getTime();
         wx.switchTab({
-          url: '../feeds/feeds',
+          url: '../feeds/feeds?t=' + t,
           success:  function  (e)  {
+            console.log(e);
             var page = getCurrentPages().pop();
             if (page == undefined || page == null) return;
-            page.onShow();
+            page.onLoad();
           }
         })
       },

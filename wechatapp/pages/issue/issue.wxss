@@ -40,7 +40,7 @@
 	align-items: center;
 	background-color: #fff;
 	padding: 30rpx;
-	margin-bottom: 30rpx;
+	margin-bottom: 110rpx;
 }
 .ans-wrapper image{
 	width: 80rpx;
@@ -116,5 +116,12 @@
 .rep-wrapper {
  	align-items: center;
 	background-color: #fff;
-	padding: 10rpx 0 0 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border-radius: 0rpx
+}
+.submit{
+	background-color: #f75f48;
+	color: #fff
 }

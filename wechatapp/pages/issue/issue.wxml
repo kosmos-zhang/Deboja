@@ -8,13 +8,13 @@
  			  <view >浏览量：{{question.ViewCount}}</view>
 			</view>
 		</view>
-		<view class="ques-title">{{question.Title}}</view>
+		<!--<view class="ques-title">{{question.Title}}</view>-->
 		<view class="ques-content">{{question.Contents}}</view>
 	</view>
   <view class="ans-wrapper">
     <block wx:for="{{answers}}" wx:key="item.Id">
       <view class="master-info">
-        <image src="{{item.AvatarUrl}}"></image>
+        <!--<image src="{{item.AvatarUrl}}"></image>-->
         <view class="ques-sec">
           <view class="master-user">{{item.UserName}}</view>
         </view>

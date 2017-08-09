@@ -106,8 +106,9 @@ Page({
       },
       success: function (res) {
         console.log(res);
-        wx.reLaunch({
-          url: '../issue/issue?qid=' + that.data.questionId
+        var t = new Date().getTime();
+        wx.redirectTo({
+          url: '../issue/issue?qid=' + that.data.questionId+'&t='+t
         })
       },
       fail: function(res){
