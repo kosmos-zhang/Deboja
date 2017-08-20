@@ -1,9 +1,9 @@
 /**app.wxss**/
 page {
-	background-color: #eee;
-	height: 100%;
-	font-family: -apple-system-font,Microsoft YaHei,Helvetica Neue,Helvetica,sans-serif;
-	font-size: 22rpx;
+  background-color: #eee;
+  height: 100%;
+  font-family: -apple-system-font,Microsoft YaHei,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 22rpx;
 }
 .container {
   height: 100%;
