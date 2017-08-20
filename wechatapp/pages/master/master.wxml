@@ -1,0 +1,45 @@
+<view id="requestMaster">
+  <form bindsubmit="formSubmit">
+    <view class="section">
+      <view class="section__title">姓名:</view>
+      <view class='form-group'>
+        <input type="text" class="input-text" name="username" disabled="{{CanEdit ? false : true}}" value="{{RealName}}" placeholder="请输入姓名" />
+      </view>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">联系电话:</view>
+      <view class='form-group'>
+        <input type="text" class="input-text" name="usermobile" disabled="{{CanEdit ? false : true}}" value="{{Mobile}}" placeholder="请输入联系电话" />
+      </view>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">身份证号:</view>
+      <view class='form-group'>
+        <input type="text" class="input-text" name="useridcard" disabled="{{CanEdit ? false : true}}" value="{{IdCard}}" placeholder="请输入身份证号" />
+      </view>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">出生日期:</view>
+      <view class='form-group'>
+        <picker mode="date" name="userbirthday" value="{{Birthday}}" disabled="{{CanEdit ? false : true}}" start="1900-01-01" end="2199-12-31" bindchange="datePickerBindchange">{{Birthday}}</picker>
+      </view>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">主修专业:</view>
+      <view class='form-group'>
+        <input type="text" class="input-text" name="usermajor" disabled="{{CanEdit ? false : true}}" value="{{Major}}" placeholder="请输入主修专业" />
+      </view>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">特长:</view>
+      <view class='form-group'>
+        <textarea class="input-textarea" name="userdesc" disabled="{{CanEdit ? false : true}}" value="{{Description}}" placeholder="请输入其他信息，以增加审核通过几率"/>
+      </view>
+    </view>
+
+    <view class="section btn-area">
+      <button formType="submit" disabled="{{CanEdit ? false : true}}">提交</button>
+      <button formType="reset" disabled="{{CanEdit ? false : true}}">清空</button>
+    </view>
+  </form>
+</view>

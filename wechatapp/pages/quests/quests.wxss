@@ -41,12 +41,6 @@
 	margin-top: 40rpx;
 
 }
-.voice-wrapper{
-
-}
-.person{
-
-}
 .item-ans image{
 	/*display: inline-block;*/
 	width: 80rpx;

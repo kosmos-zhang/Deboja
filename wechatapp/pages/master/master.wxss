@@ -1,0 +1,52 @@
+#requestMaster {
+  font-size: 28rpx;
+  margin-top: 25px;
+}
+
+.section {
+  clear: both;
+  width: 90%;
+  margin-left: 15px;
+}
+.section section_gap {
+  margin-top: 5px;
+}
+.section__title {
+  float: left;
+  width: 25%;
+  margin-top: 3px;
+}
+
+.form-group {
+  float: right;
+  width: 75%;
+}
+
+.input-text {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  height: 16px;
+}
+.input-textarea {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  width: 99%;
+}
+
+.button {
+  border: 1px solid #1aad19;
+  height: 22px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+.section btn-area {
+  margin-top: 10px;
+}
+.picker {
+  padding: 13px;
+  background-color: #fff;
+}
+.input-radio {
+  margin-right: 20px;
+}
