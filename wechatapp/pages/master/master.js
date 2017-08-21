@@ -80,7 +80,17 @@ Page({
       Description: e.detail.value.userdesc,
     }
 
-    if (masterInfo.RealName.length <= 0) {
+    if (masterInfo.RealName.length <= 0 ||
+      masterInfo.Mobile.length <= 0 ||
+      masterInfo.IdCard.length <= 0 ||
+      masterInfo.Major.length <= 0 ||
+      masterInfo.Description.length <= 0) {
+      wx.showModal({
+         title: '提示',
+         content: '请填写完整信息，已提高认证通过',
+         success: function (res) {
+         }
+      })
       return;
     }
 

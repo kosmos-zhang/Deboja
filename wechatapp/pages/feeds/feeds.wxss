@@ -58,7 +58,6 @@
   border-radius: 15px;
   background-color: #FFF;
   font-size: 15px
-
 }
 .quiz-wrapper{
 	background-color: #fff;
