@@ -32,7 +32,7 @@
       },
       {
         "pagePath": "pages/search/search",
-        "text": "专家",
+        "text": "职涯专家",
         "iconPath": "img/search.png",
         "selectedIconPath": "img/search1.png"
       },
