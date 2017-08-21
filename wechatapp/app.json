@@ -38,7 +38,7 @@
       },
       {
         "pagePath": "pages/mine/mine",
-        "text": "个人",
+        "text": "我的职涯",
         "iconPath": "img/mine.png",
         "selectedIconPath": "img/mine1.png"
       }
